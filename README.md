@@ -3,11 +3,21 @@
 This project will query the government covid dashboard, and generate graphs.
 
 Current supported queries supported:
-- Cases by specimen date
+
+- Using --dataType you can specify the data you want to search for
+    - Deaths can be searched using: "newDeaths28DaysByDeathDate", "cumDeaths28DaysByDeathDate",
+                            "cumDeaths28DaysByDeathDateRate"
+        - Cases can be searched from nation down to local tier local authority
+        
+    - Cases can be searched using: "newCasesBySpecimenDate", "cumCasesBySpecimenDateRate", "newPillarOneTestsByPublishDate",
+                            "newPillarTwoTestsByPublishDate", "newPillarTwoTestsByPublishDate",
+                            "newPillarFourTestsByPublishDate"
+        - Deaths can be searched for at nation and regional levels
+        
 - Locations: ltla, utla, nation
-- Durations: fortnight, month, allTime or you can specify a number of days
+- Durations: fortnight, month, allTime or you can specify a number of days as an integer eg "100"
 
 Build your query as below on the command line:
 
-`python Visualisations.py --areaType="ltla" --areaName="manchester" --duration="allTime"
+`python Visualisations.py --dataType="newCasesBySpecimenDate" --areaType="ltla" --areaName="manchester" --duration="allTime"
 `
