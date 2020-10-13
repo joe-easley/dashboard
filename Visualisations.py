@@ -102,6 +102,16 @@ class APICaller:
             df = DataFrame(date_and_cases[:7], columns=["Date", "CasesBySpecimenDate"])
             return df
 
+        else:
+            try:
+                duration_as_int = int(duration)
+                df = DataFrame(date_and_cases[:duration_as_int], columns=["Date", "CasesBySpecimenDate"])
+                return df
+            except:
+                print("Date could not be consumed, check value is int")
+                exit()
+
+
     def calculate_moving_average(self, dataframe):
         """
 
