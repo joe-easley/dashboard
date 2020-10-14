@@ -21,3 +21,7 @@ Build your query as below on the command line:
 
 `python Visualisations.py --dataType="newCasesBySpecimenDate" --areaType="ltla" --areaName="manchester" --duration="allTime"
 `
+
+This can also be run using the gui. Run the gui_visualise.py script in cmd. This is still a bit buggy
+
+`python gui_visualise.py`
