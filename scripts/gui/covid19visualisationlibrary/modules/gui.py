@@ -163,7 +163,7 @@ class GUI:
         return area_name
 
     def gui_check_if_more_data_required(self):
-        layout = [[sg.Text(f"Would you like to access more data?"), sg.InputText()],
+        layout = [[sg.Text(f"Would you like to access more data?")],
                   [sg.Listbox(enable_events=True, values=["Yes", "No"], size=(30, 6))]]
 
         window = sg.Window('Covid19 Data Analyser', layout)
